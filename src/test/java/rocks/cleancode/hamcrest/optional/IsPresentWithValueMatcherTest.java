@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 public class IsPresentWithValueMatcherTest {
 
@@ -13,7 +14,7 @@ public class IsPresentWithValueMatcherTest {
     public void should_match_optional_with_value() {
         Optional<String> optionalWithValue = Optional.of("Dummy value");
 
-        assertThat(optionalWithValue, is(new IsPresentWithValueMatcher<>()));
+        assertThat(optionalWithValue, is(new IsPresentWithValueMatcher<>(equalTo("Dummy value"))));
     }
 
 }
