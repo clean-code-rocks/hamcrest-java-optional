@@ -8,6 +8,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static rocks.cleancode.hamcrest.optional.IsEmptyMatcher.empty;
 
 public class IsEmptyMatcherTest {
 
@@ -15,7 +16,7 @@ public class IsEmptyMatcherTest {
     public void should_match_empty_optional() {
         Optional<?> emptyOptional = Optional.empty();
 
-        assertThat(emptyOptional, is(new IsEmptyMatcher<>()));
+        assertThat(emptyOptional, is(empty()));
     }
 
     @Test
@@ -24,7 +25,7 @@ public class IsEmptyMatcherTest {
 
         AssertionError assertionError = assertThrows(
                 AssertionError.class,
-                () -> assertThat(optional, is(new IsEmptyMatcher<>()))
+                () -> assertThat(optional, is(empty()))
         );
 
         String expectedMessage = String.format(
