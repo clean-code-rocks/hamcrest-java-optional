@@ -8,6 +8,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static rocks.cleancode.hamcrest.optional.IsPresentMatcher.present;
 
 public class IsPresentMatcherTest {
 
@@ -15,7 +16,7 @@ public class IsPresentMatcherTest {
     public void should_match_optional_with_value() {
         Optional<String> optionalWithValue = Optional.of("Dummy value");
 
-        assertThat(optionalWithValue, is(new IsPresentMatcher<>()));
+        assertThat(optionalWithValue, is(present()));
     }
 
     @Test
@@ -24,7 +25,7 @@ public class IsPresentMatcherTest {
 
         AssertionError assertionError = assertThrows(
                 AssertionError.class,
-                () -> assertThat(optional, is(new IsPresentMatcher<>()))
+                () -> assertThat(optional, is(present()))
         );
 
         String expectedMessage = String.format(
