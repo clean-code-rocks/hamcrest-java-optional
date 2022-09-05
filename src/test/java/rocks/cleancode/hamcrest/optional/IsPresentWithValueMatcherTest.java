@@ -8,6 +8,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static rocks.cleancode.hamcrest.optional.IsPresentWithValueMatcher.presentWithValue;
 
 public class IsPresentWithValueMatcherTest {
 
@@ -15,7 +16,7 @@ public class IsPresentWithValueMatcherTest {
     public void should_match_optional_with_value() {
         Optional<String> optionalWithValue = Optional.of("Dummy value");
 
-        assertThat(optionalWithValue, is(new IsPresentWithValueMatcher<>(equalTo("Dummy value"))));
+        assertThat(optionalWithValue, is(presentWithValue(equalTo("Dummy value"))));
     }
 
     @Test
@@ -24,7 +25,7 @@ public class IsPresentWithValueMatcherTest {
 
         AssertionError assertionError = assertThrows(
                 AssertionError.class,
-                () -> assertThat(emptyOptional, is(new IsPresentWithValueMatcher<>(equalTo("Dummy value"))))
+                () -> assertThat(emptyOptional, is(presentWithValue(equalTo("Dummy value"))))
         );
 
         String expectedMessage = String.format(
@@ -42,7 +43,7 @@ public class IsPresentWithValueMatcherTest {
 
         AssertionError assertionError = assertThrows(
                 AssertionError.class,
-                () -> assertThat(optionalWithValue, is(new IsPresentWithValueMatcher<>(equalTo("Other dummy value"))))
+                () -> assertThat(optionalWithValue, is(presentWithValue(equalTo("Other dummy value"))))
         );
 
         String expectedMessage = String.format(
