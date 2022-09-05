@@ -7,5 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Matcher for empty optional
+- Matcher for optional with value
 
 [Unreleased]: https://github.com/clean-code-rocks/hamcrest-java-optional/commits/main
