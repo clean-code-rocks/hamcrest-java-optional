@@ -8,11 +8,16 @@ import java.util.Optional;
 public class IsPresentMatcher<T> extends TypeSafeMatcher<Optional<T>> {
     @Override
     protected boolean matchesSafely(Optional<T> optional) {
-        return true;
+        return optional.isPresent();
     }
 
     @Override
     public void describeTo(Description description) {
+        description.appendText("present");
+    }
 
+    @Override
+    protected void describeMismatchSafely(Optional<T> optional, Description mismatchDescription) {
+        mismatchDescription.appendText("was empty");
     }
 }
