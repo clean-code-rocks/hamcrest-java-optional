@@ -22,10 +22,18 @@ public class IsPresentWithValueMatcherTest {
     public void should_fail_when_optional_is_empty() {
         Optional<String> emptyOptional = Optional.empty();
 
-        assertThrows(
+        AssertionError assertionError = assertThrows(
                 AssertionError.class,
                 () -> assertThat(emptyOptional, is(new IsPresentWithValueMatcher<>(equalTo("Dummy value"))))
         );
+
+        String expectedMessage = String.format(
+                "%n%s%n%s",
+                "Expected: is present with value \"Dummy value\"",
+                "     but: was empty"
+        );
+
+        assertThat(assertionError.getMessage(), is(equalTo(expectedMessage)));
     }
 
 }

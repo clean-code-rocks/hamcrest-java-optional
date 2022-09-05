@@ -8,8 +8,10 @@ import java.util.Optional;
 
 public class IsPresentWithValueMatcher<T> extends TypeSafeMatcher<Optional<T>> {
 
-    public IsPresentWithValueMatcher(Matcher<T> valueMatcher) {
+    private final Matcher<T> valueMatcher;
 
+    public IsPresentWithValueMatcher(Matcher<T> valueMatcher) {
+        this.valueMatcher = valueMatcher;
     }
 
     @Override
@@ -19,7 +21,13 @@ public class IsPresentWithValueMatcher<T> extends TypeSafeMatcher<Optional<T>> {
 
     @Override
     public void describeTo(Description description) {
+        description.appendText("present with value ");
+        valueMatcher.describeTo(description);
+    }
 
+    @Override
+    protected void describeMismatchSafely(Optional<T> optinal, Description mismatchDescription) {
+        mismatchDescription.appendText("was empty");
     }
 
 }
