@@ -14,7 +14,7 @@ public class IsPresentWithValueMatcher<T> extends TypeSafeMatcher<Optional<T>> {
 
     @Override
     protected boolean matchesSafely(Optional<T> optional) {
-        return true;
+        return optional.isPresent();
     }
 
     @Override
