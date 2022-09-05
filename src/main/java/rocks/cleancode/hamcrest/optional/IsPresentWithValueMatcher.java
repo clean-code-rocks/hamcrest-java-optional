@@ -16,7 +16,7 @@ public class IsPresentWithValueMatcher<T> extends TypeSafeMatcher<Optional<T>> {
 
     @Override
     protected boolean matchesSafely(Optional<T> optional) {
-        return optional.isPresent();
+        return optional.isPresent() && valueMatcher.matches(optional.get());
     }
 
     @Override
@@ -27,7 +27,12 @@ public class IsPresentWithValueMatcher<T> extends TypeSafeMatcher<Optional<T>> {
 
     @Override
     protected void describeMismatchSafely(Optional<T> optinal, Description mismatchDescription) {
-        mismatchDescription.appendText("was empty");
+        if (optinal.isPresent()) {
+            mismatchDescription.appendText("value ");
+            valueMatcher.describeMismatch(optinal.get(), mismatchDescription);
+        } else {
+            mismatchDescription.appendText("was empty");
+        }
     }
 
 }

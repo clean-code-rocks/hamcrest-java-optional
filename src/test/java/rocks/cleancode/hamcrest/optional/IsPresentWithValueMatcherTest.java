@@ -36,4 +36,22 @@ public class IsPresentWithValueMatcherTest {
         assertThat(assertionError.getMessage(), is(equalTo(expectedMessage)));
     }
 
+    @Test
+    public void should_fail_when_optional_value_does_not_match() {
+        Optional<String> optionalWithValue = Optional.of("Dummy value");
+
+        AssertionError assertionError = assertThrows(
+                AssertionError.class,
+                () -> assertThat(optionalWithValue, is(new IsPresentWithValueMatcher<>(equalTo("Other dummy value"))))
+        );
+
+        String expectedMessage = String.format(
+                "%n%s%n%s",
+                "Expected: is present with value \"Other dummy value\"",
+                "     but: value was \"Dummy value\""
+        );
+
+        assertThat(assertionError.getMessage(), is(equalTo(expectedMessage)));
+    }
+
 }
