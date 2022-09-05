@@ -6,6 +6,7 @@ import org.hamcrest.TypeSafeMatcher;
 import java.util.Optional;
 
 public class IsPresentWithValueMatcher<T> extends TypeSafeMatcher<Optional<T>> {
+
     @Override
     protected boolean matchesSafely(Optional<T> optional) {
         return true;
@@ -15,4 +16,5 @@ public class IsPresentWithValueMatcher<T> extends TypeSafeMatcher<Optional<T>> {
     public void describeTo(Description description) {
 
     }
+
 }

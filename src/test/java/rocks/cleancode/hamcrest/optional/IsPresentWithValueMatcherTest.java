@@ -13,7 +13,7 @@ public class IsPresentWithValueMatcherTest {
     public void should_match_optional_with_value() {
         Optional<String> optionalWithValue = Optional.of("Dummy value");
 
-        assertThat(optionalWithValue, is(new IsPresentWithValueMatcher()));
+        assertThat(optionalWithValue, is(new IsPresentWithValueMatcher<>()));
     }
 
 }
