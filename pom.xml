@@ -6,7 +6,7 @@
 
     <groupId>rocks.cleancode</groupId>
     <artifactId>hamcrest-java-optional</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <name>Hamcrest - Optional</name>
     <description>Java Hamcrest matchers for java.util.Optional</description>
