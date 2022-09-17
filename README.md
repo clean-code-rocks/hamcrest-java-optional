@@ -4,7 +4,7 @@
 
 ## Usage
 
-Three matchers are provided for `Optional`: `empty()`, `present()` and `presentWithValue(matcher)`.
+Three matchers are provided for `Optional`: `empty()`, `present()` and `value(matcher)`.
 
 ### empty()
 
@@ -32,7 +32,7 @@ Optional<String> optional = Optional.of("Dummy value");
 assertThat(optional, is(present()));
 ```
 
-### presentWithValue(matcher)
+### value(matcher)
 
 This matcher matches an `Optional` with a value matching the given matcher.
 
@@ -40,8 +40,8 @@ This matcher matches an `Optional` with a value matching the given matcher.
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
-import static rocks.cleancode.hamcrest.optional.IsEmptyMatcher.presentWithValue;
+import static rocks.cleancode.hamcrest.optional.ValueMatcher.value;
 
 Optional<String> optional = Optional.of("Dummy value");
-assertThat(optional, is(presentWithValue(equalTo("Dummy value"))));
+assertThat(optional, value(is(equalTo("Dummy value"))));
 ```
