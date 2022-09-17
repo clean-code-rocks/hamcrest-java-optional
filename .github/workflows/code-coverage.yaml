@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  code-coverage:
-    name: Code coverage
+  codecov:
+    name: Codecov
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
