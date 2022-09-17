@@ -8,15 +8,15 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static rocks.cleancode.hamcrest.optional.IsPresentWithValueMatcher.presentWithValue;
+import static rocks.cleancode.hamcrest.optional.ValueMatcher.value;
 
-public class IsPresentWithValueMatcherTest {
+public class ValueMatcherTest {
 
     @Test
     public void should_match_optional_with_value() {
         Optional<String> optionalWithValue = Optional.of("Dummy value");
 
-        assertThat(optionalWithValue, is(presentWithValue(equalTo("Dummy value"))));
+        assertThat(optionalWithValue, value(is(equalTo("Dummy value"))));
     }
 
     @Test
@@ -25,12 +25,12 @@ public class IsPresentWithValueMatcherTest {
 
         AssertionError assertionError = assertThrows(
                 AssertionError.class,
-                () -> assertThat(emptyOptional, is(presentWithValue(equalTo("Dummy value"))))
+                () -> assertThat(emptyOptional, value(is(equalTo("Dummy value"))))
         );
 
         String expectedMessage = String.format(
                 "%n%s%n%s",
-                "Expected: is present with value \"Dummy value\"",
+                "Expected: value is \"Dummy value\"",
                 "     but: was empty"
         );
 
@@ -43,13 +43,13 @@ public class IsPresentWithValueMatcherTest {
 
         AssertionError assertionError = assertThrows(
                 AssertionError.class,
-                () -> assertThat(optionalWithValue, is(presentWithValue(equalTo("Other dummy value"))))
+                () -> assertThat(optionalWithValue, value(is(equalTo("Other dummy value"))))
         );
 
         String expectedMessage = String.format(
                 "%n%s%n%s",
-                "Expected: is present with value \"Other dummy value\"",
-                "     but: value was \"Dummy value\""
+                "Expected: value is \"Other dummy value\"",
+                "     but: was \"Dummy value\""
         );
 
         assertThat(assertionError.getMessage(), is(equalTo(expectedMessage)));

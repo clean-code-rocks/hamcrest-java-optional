@@ -6,15 +6,15 @@ import org.hamcrest.TypeSafeMatcher;
 
 import java.util.Optional;
 
-public class IsPresentWithValueMatcher<T> extends TypeSafeMatcher<Optional<T>> {
+public class ValueMatcher<T> extends TypeSafeMatcher<Optional<T>> {
 
-    public static <T> Matcher<Optional<T>> presentWithValue(Matcher<T> valueMatcher) {
-        return new IsPresentWithValueMatcher<>(valueMatcher);
+    public static <T> Matcher<Optional<T>> value(Matcher<T> valueMatcher) {
+        return new ValueMatcher<>(valueMatcher);
     }
 
     private final Matcher<T> valueMatcher;
 
-    private IsPresentWithValueMatcher(Matcher<T> valueMatcher) {
+    private ValueMatcher(Matcher<T> valueMatcher) {
         this.valueMatcher = valueMatcher;
     }
 
@@ -25,14 +25,13 @@ public class IsPresentWithValueMatcher<T> extends TypeSafeMatcher<Optional<T>> {
 
     @Override
     public void describeTo(Description description) {
-        description.appendText("present with value ");
+        description.appendText("value ");
         valueMatcher.describeTo(description);
     }
 
     @Override
     protected void describeMismatchSafely(Optional<T> optinal, Description mismatchDescription) {
         if (optinal.isPresent()) {
-            mismatchDescription.appendText("value ");
             valueMatcher.describeMismatch(optinal.get(), mismatchDescription);
         } else {
             mismatchDescription.appendText("was empty");
