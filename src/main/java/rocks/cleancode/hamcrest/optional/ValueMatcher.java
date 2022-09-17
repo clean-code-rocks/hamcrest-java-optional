@@ -6,8 +6,21 @@ import org.hamcrest.TypeSafeMatcher;
 
 import java.util.Optional;
 
+/**
+ * Matches the value of an {@link java.util.Optional}.
+ *
+ * @param <T> Type of the {@link java.util.Optional} value
+ * @since 1.0.0
+ */
 public class ValueMatcher<T> extends TypeSafeMatcher<Optional<T>> {
 
+    /**
+     * Create a matcher for the value of the {@link java.util.Optional}.
+     * @param valueMatcher Matcher for the value
+     * @return Value matcher
+     * @param <T> Type of the {@link java.util.Optional} value
+     * @since 1.0.0
+     */
     public static <T> Matcher<Optional<T>> value(Matcher<T> valueMatcher) {
         return new ValueMatcher<>(valueMatcher);
     }
@@ -18,17 +31,26 @@ public class ValueMatcher<T> extends TypeSafeMatcher<Optional<T>> {
         this.valueMatcher = valueMatcher;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     protected boolean matchesSafely(Optional<T> optional) {
         return optional.isPresent() && valueMatcher.matches(optional.get());
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void describeTo(Description description) {
         description.appendText("value ");
         valueMatcher.describeTo(description);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     protected void describeMismatchSafely(Optional<T> optinal, Description mismatchDescription) {
         if (optinal.isPresent()) {
