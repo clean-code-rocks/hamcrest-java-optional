@@ -8,6 +8,10 @@
     <artifactId>hamcrest-java-optional</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
+    <name>Hamcrest - Optional</name>
+    <description>Java Hamcrest matchers for java.util.Optional</description>
+    <url>https://github.com/clean-code-rocks/hamcrest-java-optional</url>
+
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -77,4 +81,30 @@
             </plugin>
         </plugins>
     </build>
+
+    <licenses>
+        <license>
+            <name>The GNU General Public License, Version 3.0</name>
+            <url>https://www.gnu.org/licenses/gpl-3.0.html</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Benjamin PREVOT</name>
+            <organization>Clean code rocks</organization>
+            <organizationUrl>https://github.com/clean-code-rocks</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:https://github.com/clean-code-rocks/hamcrest-java-optional.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:clean-code-rocks/hamcrest-java-optional.git</developerConnection>
+        <url>https://github.com/clean-code-rocks/hamcrest-java-optional</url>
+    </scm>
+
+    <issueManagement>
+        <system>github</system>
+        <url>https://github.com/clean-code-rocks/hamcrest-java-optional/issues</url>
+    </issueManagement>
 </project>
