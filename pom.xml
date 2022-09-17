@@ -84,6 +84,7 @@
                         <link>http://hamcrest.org/JavaHamcrest/javadoc/2.2</link>
                     </links>
                     <additionalJOption>--no-module-directories</additionalJOption>
+                    <quiet>true</quiet>
                 </configuration>
                 <executions>
                     <execution>
