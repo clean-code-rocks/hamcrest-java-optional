@@ -1,5 +1,7 @@
 # Hamcrest - Optional
 
+[![codecov](https://codecov.io/gh/clean-code-rocks/hamcrest-java-optional/branch/main/graph/badge.svg?token=MD5XCHBMQ4)](https://codecov.io/gh/clean-code-rocks/hamcrest-java-optional)
+
 [Java Hamcrest](http://hamcrest.org/JavaHamcrest/) matchers for `java.util.Optional`.
 
 ## Usage
