@@ -6,6 +6,18 @@
 
 [Java Hamcrest](http://hamcrest.org/JavaHamcrest/) matchers for `java.util.Optional`.
 
+## Installation
+
+### Maven
+
+```xml
+<dependency>
+    <groupId>rocks.cleancode</groupId>
+    <artifactId>hamcrest-java-optional</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
 ## Usage
 
 Three matchers are provided for `Optional`: `empty()`, `present()` and `value(matcher)`.
