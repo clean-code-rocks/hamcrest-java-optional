@@ -26,7 +26,7 @@ This matcher matches an `Optional` with a value.
 ```java
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
-import static rocks.cleancode.hamcrest.optional.IsEmptyMatcher.present;
+import static rocks.cleancode.hamcrest.optional.IsPresentMatcher.present;
 
 Optional<String> optional = Optional.of("Dummy value");
 assertThat(optional, is(present()));
