@@ -14,7 +14,7 @@
 ```xml
 <dependency>
     <groupId>rocks.cleancode</groupId>
-    <artifactId>hamcrest-java-optional</artifactId>
+    <artifactId>hamcrest-optional</artifactId>
     <version>1.0.0</version>
     <scope>test</scope>
 </dependency>
