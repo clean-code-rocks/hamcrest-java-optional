@@ -1,6 +1,7 @@
 # Hamcrest - Optional
 
 [![Maven Central](https://img.shields.io/maven-central/v/rocks.cleancode/hamcrest-optional?color=brightgreen)](https://search.maven.org/artifact/rocks.cleancode/hamcrest-optional)
+[![javadoc](https://javadoc.io/badge2/rocks.cleancode/hamcrest-optional/javadoc.svg)](https://javadoc.io/doc/rocks.cleancode/hamcrest-optional)
 [![codecov](https://codecov.io/gh/clean-code-rocks/hamcrest-java-optional/branch/main/graph/badge.svg?token=MD5XCHBMQ4)](https://codecov.io/gh/clean-code-rocks/hamcrest-java-optional)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fclean-code-rocks%2Fhamcrest-java-optional.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fclean-code-rocks%2Fhamcrest-java-optional?ref=badge_shield)
