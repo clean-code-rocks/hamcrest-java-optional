@@ -19,5 +19,5 @@
 - Matcher for optional with value
 - Matcher for optional with value matching condition
 
-[Unreleased]: https://github.com/clean-code-rocks/hamcrest-java-optional/commits/main
+[Unreleased]: https://github.com/clean-code-rocks/hamcrest-java-optional/compare/v1.0.0...main
 [1.0.0]: https://github.com/clean-code-rocks/hamcrest-java-optional/releases/tag/v1.0.0
