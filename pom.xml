@@ -80,6 +80,20 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.ec4j.maven</groupId>
+                <artifactId>editorconfig-maven-plugin</artifactId>
+                <version>0.1.1</version>
+                <executions>
+                    <execution>
+                        <id>check</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -175,7 +189,8 @@
 
     <scm>
         <connection>scm:git:https://github.com/clean-code-rocks/hamcrest-java-optional.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:clean-code-rocks/hamcrest-java-optional.git</developerConnection>
+        <developerConnection>scm:git:ssh://git@github.com:clean-code-rocks/hamcrest-java-optional.git
+        </developerConnection>
         <url>https://github.com/clean-code-rocks/hamcrest-java-optional</url>
     </scm>
 
