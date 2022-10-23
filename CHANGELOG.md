@@ -11,7 +11,7 @@
 
 - Manage code style with [EditorConfig](https://editorconfig.org/)
 
-## [1.0.0] - 2020-09-18
+## [1.0.0] - 2022-09-18
 
 ### Features
 
