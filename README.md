@@ -8,6 +8,10 @@
 
 [Java Hamcrest](http://hamcrest.org/JavaHamcrest/) matchers for `java.util.Optional`.
 
+## Requirement
+
+Java 8+
+
 ## Installation
 
 ### Maven
