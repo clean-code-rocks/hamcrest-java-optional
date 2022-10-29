@@ -6,7 +6,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fclean-code-rocks%2Fhamcrest-java-optional.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fclean-code-rocks%2Fhamcrest-java-optional?ref=badge_shield)
 
-[Java Hamcrest](http://hamcrest.org/JavaHamcrest/) matchers for `java.util.Optional`.
+[Java Hamcrest](https://hamcrest.org/JavaHamcrest/) matchers for `java.util.Optional`.
 
 ## Requirement
 
