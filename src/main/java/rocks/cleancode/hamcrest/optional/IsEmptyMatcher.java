@@ -10,14 +10,17 @@ import java.util.Optional;
  * Matches an empty {@link java.util.Optional}.
  *
  * @param <T> Type of the Optional value
+ *
  * @since 1.0.0
  */
 public class IsEmptyMatcher<T> extends TypeSafeMatcher<Optional<T>> {
 
     /**
      * Create a matcher for empty {@link java.util.Optional}.
+     *
      * @return Empty {@link java.util.Optional} matcher
      * @param <T> Type of the {@link java.util.Optional} value
+     *
      * @since 1.0.0
      */
     public static <T> Matcher<Optional<T>> empty() {
