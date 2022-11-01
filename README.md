@@ -20,7 +20,7 @@ Java 8+
 <dependency>
     <groupId>rocks.cleancode</groupId>
     <artifactId>hamcrest-optional</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <scope>test</scope>
 </dependency>
 ```
@@ -37,6 +37,7 @@ This matcher matches an `Optional` without value.
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static rocks.cleancode.hamcrest.optional.IsEmptyMatcher.empty;
+// Or import static rocks.cleancode.hamcrest.optional.OptionalMatchers.empty;
 
 Optional<?> optional = Optional.empty();
 assertThat(optional, is(empty()));
@@ -50,6 +51,7 @@ This matcher matches an `Optional` with a value.
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static rocks.cleancode.hamcrest.optional.IsPresentMatcher.present;
+// Or import static rocks.cleancode.hamcrest.optional.OptionalMatchers.present;
 
 Optional<String> optional = Optional.of("Dummy value");
 assertThat(optional, is(present()));
@@ -64,6 +66,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static rocks.cleancode.hamcrest.optional.ValueMatcher.value;
+// Or import static rocks.cleancode.hamcrest.optional.OptionalMatchers.value;
 
 Optional<String> optional = Optional.of("Dummy value");
 assertThat(optional, value(is(equalTo("Dummy value"))));

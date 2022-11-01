@@ -55,9 +55,9 @@ public class ValueMatcher<T> extends TypeSafeMatcher<Optional<T>> {
      * {@inheritDoc}
      */
     @Override
-    protected void describeMismatchSafely(Optional<T> optinal, Description mismatchDescription) {
-        if (optinal.isPresent()) {
-            valueMatcher.describeMismatch(optinal.get(), mismatchDescription);
+    protected void describeMismatchSafely(Optional<T> optional, Description mismatchDescription) {
+        if (optional.isPresent()) {
+            valueMatcher.describeMismatch(optional.get(), mismatchDescription);
         } else {
             mismatchDescription.appendText("was empty");
         }

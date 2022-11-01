@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [1.1.0] - 2022-11-01
 
 ### Features
 
@@ -23,7 +23,7 @@
 - Matcher for optional with value
 - Matcher for optional with value matching condition
 
-[Unreleased]: https://github.com/clean-code-rocks/hamcrest-java-optional/compare/v1.0.0...main
+[1.1.0]: https://github.com/clean-code-rocks/hamcrest-java-optional/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/clean-code-rocks/hamcrest-java-optional/releases/tag/v1.0.0
 
 [javadoc.io]: https://javadoc.io/
