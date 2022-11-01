@@ -20,7 +20,7 @@ Java 8+
 <dependency>
     <groupId>rocks.cleancode</groupId>
     <artifactId>hamcrest-optional</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <scope>test</scope>
 </dependency>
 ```
