@@ -10,4 +10,8 @@ public class OptionalMatchers {
         return IsEmptyMatcher.empty();
     }
 
+    public static <T> Matcher<Optional<T>> present() {
+        return IsPresentMatcher.present();
+    }
+
 }

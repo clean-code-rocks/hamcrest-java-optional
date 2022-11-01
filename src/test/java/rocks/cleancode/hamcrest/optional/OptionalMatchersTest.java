@@ -18,4 +18,11 @@ public class OptionalMatchersTest {
         assertThat(isEmptyMatcher, is(instanceOf(IsEmptyMatcher.class)));
     }
 
+    @Test
+    public void should_create_is_present_matcher() {
+        Matcher<Optional<String>> isPresentMatcher = OptionalMatchers.present();
+
+        assertThat(isPresentMatcher, is(instanceOf(IsPresentMatcher.class)));
+    }
+
 }
