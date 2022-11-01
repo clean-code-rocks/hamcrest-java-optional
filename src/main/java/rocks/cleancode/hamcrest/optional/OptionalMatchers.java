@@ -14,4 +14,8 @@ public class OptionalMatchers {
         return IsPresentMatcher.present();
     }
 
+    public static <T> Matcher<Optional<T>> value(Matcher<T> valueMatcher) {
+        return ValueMatcher.value(valueMatcher);
+    }
+
 }
