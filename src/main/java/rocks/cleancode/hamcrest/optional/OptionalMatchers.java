@@ -11,6 +11,9 @@ import java.util.Optional;
  */
 public class OptionalMatchers {
 
+    private OptionalMatchers() {
+    }
+
     /**
      * Create a matcher for empty {@link java.util.Optional}.
      *
