@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Features
+
+- Facility class `OptionalMatchers` to create matchers
+
 ### Documentation
 
 - Add link to [javadoc.io]
